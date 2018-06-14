@@ -150,22 +150,22 @@ class MapView: UIView {
             var tz: TimeZone
             switch tzEnum {
                 case .ALL:
-                    tz = TimeZone(colorCode: "0", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "0", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
                 case .PST:
-                    tz = TimeZone(colorCode: "1", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "1", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
                 case .MT, .ENC:
-                    tz = TimeZone(colorCode: "2", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "2", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
                 case .WSC, .MA:
-                    tz = TimeZone(colorCode: "3", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "3", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
                 case .ESC, .NE:
-                    tz = TimeZone(colorCode: "4", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "4", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
                 case .WNC, .SA:
-                    tz = TimeZone(colorCode: "5", timeZoneEnum: tzEnum, timeZoneStates: stateArray, scale: self.calculateScale(), position: self.calculatePosition())
+                    tz = TimeZone(tzColorCode: "5", tzEnum: tzEnum, tzStateEnums: stateArray, tzScale: self.calculateScale(), tzPosition: self.calculatePosition())
                     break
             }
             self.timeZones.add([tz.getEnum().getCode() : tz])
