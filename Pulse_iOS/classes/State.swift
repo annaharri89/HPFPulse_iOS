@@ -23,14 +23,14 @@ class State {
     var bullyingResources = [Resource]()
     var domesticViolence = [Resource]()
     
-    init(sEnum: StateEnum, scale: CATransform3D, position: CGPoint) {
+    init(sEnum: StateEnum, stateScale: CATransform3D, statePosition: CGPoint) {
         self.code = sEnum.getCode()
         self.name = sEnum.getName()
         self.stateEnum = sEnum
         self.path = UIBezierPath(svgPath: sEnum.getPath())
         self.layer = CAShapeLayer()
-        self.scale = scale
-        self.position = position
+        self.scale = stateScale
+        self.position = statePosition
         self.setLayerPath()
     }
     

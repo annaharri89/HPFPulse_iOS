@@ -9,7 +9,53 @@
 import Foundation
 
 class Resource {
-    init() {
-        
+    var id: Int
+    var orgName: String
+    var url: String
+    var phoneNumber: String
+    var category: String
+    var stateName: String
+    var stateEnum: StateEnum
+    
+    
+    init(resourceCategory: String, resourceId: Int, resourceOrgName: String, resourcePhone: String, resourceStateEnum: StateEnum, resourceUrl: String) {
+        self.category = resourceCategory
+        self.id = resourceId
+        self.orgName = resourceOrgName
+        self.phoneNumber = resourcePhone
+        self.stateEnum = resourceStateEnum
+        self.stateName = resourceStateEnum.getName()
+        self.url = resourceUrl
     }
+    
+    
+    func getCategory() -> String {
+        return self.category
+    }
+    
+    func getId() -> CLong { //todo check this is the right type; in android it returned a 'long'
+        return self.id
+    }
+    
+    func getName() -> String {
+        return self.orgName
+    }
+    
+    func getPhoneNumber() -> String {
+        return self.phoneNumber
+    }
+    
+    func getStateEnum() -> StateEnum {
+        return self.stateEnum
+    }
+    
+    
+    func getStateName() -> String {
+        return self.stateName
+    }
+    
+    func getUrl() -> String {
+        return self.url
+    }
+
 }

@@ -28,25 +28,24 @@ class TimeZone {
     
     //todo implement var static final String COLOR_PREFIX = "map_";
     
-    init(colorCode: String, timeZoneEnum: TimeZoneEnum, timeZoneStates: [StateEnum], scale: CATransform3D, position: CGPoint) {
-        self.scale = scale //todo create setScale function in Utils, call here; switch on the size of the mapView bounds or width or height
+    init(tzColorCode: String, tzEnum: TimeZoneEnum, tzStateEnums: [StateEnum], tzScale: CATransform3D, tzPosition: CGPoint) {
+        self.scale = tzScale //todo create setScale function in Utils, call here; switch on the size of the mapView bounds or width or height
         print("Scale:")
         print(scale)
-        self.position = position // todo create setPosition function in Utils, call here
+        self.position = tzPosition // todo create setPosition function in Utils, call here
         
-        for stateEnum in timeZoneStates {
-            let state = State(sEnum: stateEnum, scale: self.scale, position: self.position)
+        for stateEnum in tzStateEnums {
+            let state = State(sEnum: stateEnum, stateScale: self.scale, statePosition: self.position)
             states.append(state)
         }
-        self.timeZoneEnum = timeZoneEnum
-        self.code = timeZoneEnum.getCode()
-        self.name = timeZoneEnum.getName()
-        self.description = timeZoneEnum.getDescription()
+        self.timeZoneEnum = tzEnum
+        self.code = tzEnum.getCode()
+        self.name = tzEnum.getName()
+        self.description = tzEnum.getDescription()
         
         
-        self.colorCode = colorCode;
+        self.colorCode = tzColorCode;
         self.color = self.getClrResource(qualifier: self.colorCode)
-        //self.color = UIColor.blue
         
         if (!(self.timeZoneEnum == TimeZoneEnum.ALL)) { // needed because the ALL timezone shouldn't be seen
             self.setStateLayerSettings(color: self.color)
