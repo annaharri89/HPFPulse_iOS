@@ -1,0 +1,13 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FantasticSnowflake" "${PODS_CONFIGURATION_BUILD_DIR}/Reindeers" "${PODS_CONFIGURATION_BUILD_DIR}/SVGPath" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) $(SDKROOT)/usr/include/libxml2
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FantasticSnowflake/FantasticSnowflake.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Reindeers/Reindeers.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SVGPath/SVGPath.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftSVG/SwiftSVG.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "FantasticSnowflake" -framework "Reindeers" -framework "SVGPath" -framework "SwiftSVG"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) $(SRCROOT)/Reindeers/Cocoapods

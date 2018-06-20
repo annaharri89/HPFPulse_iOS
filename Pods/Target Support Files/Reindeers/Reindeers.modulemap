@@ -1,0 +1,6 @@
+framework module Reindeers {
+  umbrella header "Reindeers-umbrella.h"
+
+  export *
+  module * { export * }
+}

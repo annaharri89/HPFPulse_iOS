@@ -1,0 +1,6 @@
+framework module Pods_Pulse_iOS {
+  umbrella header "Pods-Pulse_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

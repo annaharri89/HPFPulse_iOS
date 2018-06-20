@@ -1,0 +1,6 @@
+framework module FantasticSnowflake {
+  umbrella header "FantasticSnowflake-umbrella.h"
+
+  export *
+  module * { export * }
+}
