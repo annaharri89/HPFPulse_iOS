@@ -48,8 +48,8 @@ class MapView: UIView {
     override func draw(_ rect: CGRect) {
         let deviceHeight = UIScreen.main.bounds.height
         let deviceWidth = UIScreen.main.bounds.width
-        self.frame.size.width = deviceWidth * 0.90
-        self.frame.size.height = deviceHeight * 0.35
+        self.frame.size.width = deviceWidth * 0.93
+        self.frame.size.height = deviceHeight * 0.35 // todo calculate height based off of width
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -174,12 +174,14 @@ class MapView: UIView {
     }
     
     func calculateScale() -> CATransform3D {//todo: make more accurate
+        print("width")
+        print(self.frame.size.width)
+        print("height")
+        print(self.frame.size.height)
         self.draw(CGRect())
         let width = self.frame.size.width
         let divisor = CGFloat(870.674418605)
         let scale = width/divisor
-        print("Width:")
-        print(width)
         return CATransform3DMakeScale(scale, scale, scale)
     }
     

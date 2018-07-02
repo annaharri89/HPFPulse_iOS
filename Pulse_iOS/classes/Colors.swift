@@ -29,7 +29,15 @@ extension UIColor {
         }
     }
     
-    static func buttonBlue() {
-        //todo return color
+    static func buttonBlue() -> UIColor {
+        return Utils.UIColorFromRGB(rgbValue: 0x00A9D4)
+    }
+    
+    static func lightOrange() -> UIColor {
+        return Utils.UIColorFromRGB(rgbValue: 0xFAB31B)
+    }
+    
+    static func darkOrange() -> UIColor {
+        return Utils.UIColorFromRGB(rgbValue: 0xF57B1C)
     }
 }
