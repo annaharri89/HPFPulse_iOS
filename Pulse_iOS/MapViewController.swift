@@ -14,19 +14,11 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print (TimeZoneEnum.ALL.getName()) //todo remove
-        print (StateEnum.ALASKA.getName())//todo remove
-        
+
         // create a new UIView and add it to the view controller
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        //self.view.addSubview(mapView)
-        print("screen width")
-        print(UIScreen.main.bounds.width)
-        print("screen height")
-        print(UIScreen.main.bounds.height)
-        print("Hi" + category)
     }
     
     override func didReceiveMemoryWarning() {

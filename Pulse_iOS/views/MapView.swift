@@ -45,13 +45,6 @@ class MapView: UIView {
         self.addGestureRecognizer(longPressRecognizer)
     }
     
-    override func draw(_ rect: CGRect) {
-        let deviceHeight = UIScreen.main.bounds.height
-        let deviceWidth = UIScreen.main.bounds.width
-        self.frame.size.width = deviceWidth * 0.93
-        self.frame.size.height = deviceHeight * 0.35 // todo calculate height based off of width
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let point = touch!.location(in: self)
@@ -173,19 +166,21 @@ class MapView: UIView {
         }
     }
     
-    func calculateScale() -> CATransform3D {//todo: make more accurate
-        print("width")
-        print(self.frame.size.width)
-        print("height")
-        print(self.frame.size.height)
+    override func draw(_ rect: CGRect) {
+        let deviceWidth = UIScreen.main.bounds.width
+        self.frame.size.width = deviceWidth * 0.93
+        self.frame.size.height = self.frame.size.width * 0.7
+    }
+    
+    func calculateScale() -> CATransform3D {
         self.draw(CGRect())
         let width = self.frame.size.width
-        let divisor = CGFloat(870.674418605)
+        let divisor = CGFloat(890.674418605)
         let scale = width/divisor
         return CATransform3DMakeScale(scale, scale, scale)
     }
     
-    func calculatePosition() -> CGPoint { //todo: make more accurate
+    func calculatePosition() -> CGPoint {
         self.draw(CGRect())
         let width = self.frame.size.width
         let divisor = CGFloat(-9.86)
