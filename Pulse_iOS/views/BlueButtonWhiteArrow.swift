@@ -15,7 +15,9 @@ class BlueButtonWhiteArrow: BlueButton {
         super.layoutSubviews()
         self.contentHorizontalAlignment = .left
         self.setImage(UIImage(named: "right_arrow"), for: .normal)
-        self.imageView?.tintColor = UIColor.white
+        
+            self.imageView?.tintColor = UIColor.white
+        
         if imageView != nil {
             imageEdgeInsets = UIEdgeInsets(top: 5, left: (bounds.width - 60), bottom: 5, right: 5)
             //titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (imageView?.frame.width)!)

@@ -25,6 +25,8 @@ class MapView: UIView {
         ]
     var timeZones = [String : TimeZone]()
     var highlightedTimeZone: TimeZoneEnum?
+    var selectedTimeZone: TimeZone? = nil
+    weak var delegate: MapDelegate?
         
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +47,11 @@ class MapView: UIView {
         self.addGestureRecognizer(longPressRecognizer)
     }
     
+    //hooks up the MapView to the MapViewController so that getResults can get enabled
+    func onTimeZoneSelected(sender: UIView) {
+        delegate?.onTimeZoneSelected(sender: sender)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let point = touch!.location(in: self)
@@ -55,6 +62,8 @@ class MapView: UIView {
                     let p = self.layer.convert(point, to:state.getLayer())
                     if ((state.getLayer().path!.contains(p))) {
                         self.changeHighlightedTimeZone(timeZoneEnum: timezone.getEnum())
+                        selectedTimeZone = timezone
+                        onTimeZoneSelected(sender: self)
                     }
                 }
             }
@@ -64,7 +73,12 @@ class MapView: UIView {
     
     @objc func handleLongPress(sender: UILongPressGestureRecognizer) {
         self.changeHighlightedTimeZone(timeZoneEnum: TimeZoneEnum.ALL)
+        selectedTimeZone = self.timeZones["ALL"]
+        onTimeZoneSelected(sender: self)
+    }
     
+    func getSelectedTimeZone() -> TimeZone {
+        return selectedTimeZone!
     }
     
     /**

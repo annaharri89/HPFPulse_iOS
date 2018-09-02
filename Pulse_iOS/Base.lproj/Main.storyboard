@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tH2-Iq-J0t">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,28 +17,28 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="308.5" y="490.5" width="151" height="43"/>
+                                <rect key="frame" x="131.66666666666666" y="346.66666666666669" width="150.99999999999997" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="286.5" y="541.5" width="195" height="17"/>
+                                <rect key="frame" x="109.66666666666669" y="397.66666666666669" width="195" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jk4-aK-CkG" customClass="MapView2" customModule="Pulse_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="508" width="728" height="404"/>
+                                <rect key="frame" x="20" y="508" width="374" height="116"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Si9-Ab-FWG" customClass="MapView" customModule="Pulse_iOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="28" width="728" height="471.5"/>
+                                <rect key="frame" x="20" y="28" width="374" height="327.66666666666669"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -70,18 +70,18 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="283.5" y="490.5" width="201" height="43"/>
+                                <rect key="frame" x="106.66666666666669" y="346.66666666666669" width="201" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="276.5" y="541.5" width="215" height="17"/>
+                                <rect key="frame" x="99.666666666666686" y="397.66666666666669" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
             <objects>
                 <navigationController id="tH2-Iq-J0t" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QJM-1U-MNe" customClass="NavigationBar" customModule="Pulse_iOS" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.98039215690000003" green="0.70196078429999997" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -148,17 +148,17 @@
             <objects>
                 <viewController id="3Bu-Zg-pxC" customClass="MapViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qwp-7v-j16">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="huo-IC-Nea">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jmm-fe-mAO">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="531"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-PI-hd1" customClass="MapView" customModule="Pulse_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="16" width="736" height="461.5"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="277"/>
                                                 <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6fl-PI-hd1" secondAttribute="height" multiplier="382:277" id="mq1-OY-4Qx">
@@ -167,7 +167,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a region on the map or long press to select all regions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbu-ez-hz4">
-                                                <rect key="frame" x="16" y="477.5" width="736" height="45.5"/>
+                                                <rect key="frame" x="16" y="293" width="382" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="bbu-ez-hz4" secondAttribute="height" multiplier="191:20" id="3cJ-qX-lBD">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="300"/>
@@ -193,10 +193,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1C-wr-WHf">
-                                        <rect key="frame" x="0.0" y="531" width="768" height="429"/>
+                                        <rect key="frame" x="0.0" y="341" width="414" height="331"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find resources for __ __ __ and ____." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-aP-28G">
-                                                <rect key="frame" x="16" y="8" width="736" height="320"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-aP-28G">
+                                                <rect key="frame" x="16" y="8" width="382" height="259"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -205,7 +205,7 @@
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ6-E2-P3J" customClass="BlueButtonWhiteArrow" customModule="Pulse_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="336" width="736" height="77"/>
+                                                <rect key="frame" x="16" y="275" width="382" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MJ6-E2-P3J" secondAttribute="height" multiplier="191:20" id="zix-TY-pNh"/>
                                                 </constraints>
@@ -216,6 +216,9 @@
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                                 </variation>
+                                                <connections>
+                                                    <segue destination="y9b-YQ-2Hc" kind="show" identifier="MapToResults" id="uiQ-zE-EqR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,17 +245,22 @@
                         <viewLayoutGuide key="safeArea" id="jwy-WN-I5t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="Kqv-h1-yDU"/>
+                    <connections>
+                        <outlet property="descriptionText" destination="3V2-aP-28G" id="wLx-u5-ach"/>
+                        <outlet property="getResults" destination="MJ6-E2-P3J" id="8Y7-hf-Nhg"/>
+                        <outlet property="mapView" destination="6fl-PI-hd1" id="dQP-qt-VgF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4X-X2-Oal" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340.57971014492756" y="1465.7608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="ZXk-7R-kPh">
             <objects>
-                <viewController id="y9b-YQ-2Hc" sceneMemberID="viewController">
+                <viewController id="y9b-YQ-2Hc" customClass="ResultsViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hnB-xE-h4u">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="todo: to make responsive, add views to stack view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-mu-h6f">
@@ -283,17 +291,17 @@
             <objects>
                 <viewController id="X9M-vb-hiQ" customClass="MainViewController" customModule="Pulse_iOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xPw-JD-ZGf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fOu-3R-x92">
-                                <rect key="frame" x="0.0" y="72" width="768" height="944"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="656"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x03-TT-rvf">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="229.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="138.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-Uu-CPu" customClass="BlueButton" customModule="Pulse_iOS">
-                                                <rect key="frame" x="16" y="120.5" width="736" height="85"/>
+                                                <rect key="frame" x="16" y="70.333333333333343" width="382" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="PGi-Uu-CPu" secondAttribute="height" multiplier="191:22" id="TTg-zn-Jj5"/>
                                                 </constraints>
@@ -309,7 +317,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are in crisis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATr-6e-LPf">
-                                                <rect key="frame" x="16" y="8" width="736" height="104.5"/>
+                                                <rect key="frame" x="16" y="8.0000000000000036" width="382" height="54.333333333333343"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ATr-6e-LPf" secondAttribute="height" multiplier="176:25" id="M59-1p-1Wj"/>
                                                 </constraints>
@@ -333,10 +341,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvX-eU-QNg">
-                                        <rect key="frame" x="0.0" y="229.5" width="768" height="644.5"/>
+                                        <rect key="frame" x="0.0" y="138.33333333333334" width="414" height="457.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse is here to let you know who is out there and willing to help with a form of violence you may have experienced." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U49-mV-vZB">
-                                                <rect key="frame" x="16" y="16" width="736" height="107.5"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="68.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="U49-mV-vZB" secondAttribute="height" multiplier="343:69" id="Mgz-Li-4E3"/>
                                                 </constraints>
@@ -353,10 +361,10 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-qy-NIi">
-                                                <rect key="frame" x="16" y="139.5" width="736" height="487"/>
+                                                <rect key="frame" x="16" y="100.33333333333334" width="382" height="339.33333333333326"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZB-13-MNn" customClass="BlueButtonWhiteArrow" customModule="Pulse_iOS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="736" height="79"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="73"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="All Resources">
@@ -370,7 +378,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-Ky-RFi" customClass="BlueButtonWhiteArrow" customModule="Pulse_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="136" width="736" height="79"/>
+                                                        <rect key="frame" x="0.0" y="89" width="382" height="72.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Child Abuse">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -383,7 +391,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-od-d5d" customClass="BlueButtonWhiteArrow" customModule="Pulse_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="272" width="736" height="79"/>
+                                                        <rect key="frame" x="0.0" y="177.66666666666663" width="382" height="73"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Bullying">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -396,7 +404,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzg-TA-Ofg" customClass="BlueButtonWhiteArrow" customModule="Pulse_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="408" width="736" height="79"/>
+                                                        <rect key="frame" x="0.0" y="266.66666666666669" width="382" height="72.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Domestic Violence">
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -437,10 +445,10 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-FU-WUP">
-                                        <rect key="frame" x="0.0" y="874" width="768" height="70"/>
+                                        <rect key="frame" x="0.0" y="596" width="414" height="60"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If you wish to have your organization listed, please contact us via the HPF Contact Page" translatesAutoresizingMaskIntoConstraints="NO" id="jwu-5l-car">
-                                                <rect key="frame" x="16" y="0.0" width="736" height="70"/>
+                                                <rect key="frame" x="16" y="4" width="382" height="52"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="j9U-Gl-fXF">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
@@ -506,6 +514,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="15F-Zk-YQm"/>
+        <segue reference="YiH-e6-V8p"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,17 @@ class BlueButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = UIColor.buttonBlue()
-        self.setTitleColor(UIColor.white, for: .normal)
         self.layer.cornerRadius = 5
+        
+        //enabled
+        if (self.state == .normal) {
+            self.backgroundColor = UIColor.buttonBlue()
+        }
+        self.setTitleColor(UIColor.white, for: .normal)
+        
+        //disabled
+        if (self.state == .disabled) {
+            self.backgroundColor = UIColor.gray
+        }
     }
 }

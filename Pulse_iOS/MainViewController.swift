@@ -52,7 +52,6 @@ class MainViewController: UIViewController {
         let vc = segue.destination as! MapViewController
         if (segue.identifier == "AllResourcesToMap") {
             vc.category = Config.categories.ALL_RESOURCES
-            print("SETTING ALL RESOURCES")
         } else if (segue.identifier == "ChildAbuseToMap") {
             vc.category = Config.categories.CHILD_ABUSE
         } else if (segue.identifier == "BullyingToMap") {

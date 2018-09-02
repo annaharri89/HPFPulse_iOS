@@ -55,9 +55,6 @@ class State {
     }
     
     func setLayerPath() {
-        if self.name == "South Carolina" {
-            print("south carolina")
-        }
         self.layer.path = self.path.cgPath
     }
     

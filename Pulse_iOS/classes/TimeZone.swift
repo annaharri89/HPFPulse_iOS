@@ -30,8 +30,6 @@ class TimeZone {
     
     init(tzColorCode: String, tzEnum: TimeZoneEnum, tzStateEnums: [StateEnum], tzScale: CATransform3D, tzPosition: CGPoint) {
         self.scale = tzScale //todo create setScale function in Utils, call here; switch on the size of the mapView bounds or width or height
-        print("Scale:")
-        print(scale)
         self.position = tzPosition // todo create setPosition function in Utils, call here
         
         for stateEnum in tzStateEnums {
