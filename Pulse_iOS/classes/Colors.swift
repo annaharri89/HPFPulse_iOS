@@ -40,4 +40,15 @@ extension UIColor {
     static func darkOrange() -> UIColor {
         return Utils.UIColorFromRGB(rgbValue: 0xF57B1C)
     }
+    
+    //Result button grey
+    static func veryLightGrey() -> UIColor {
+        return Utils.UIColorFromRGB(rgbValue: 0xF4F4F4)
+    }
+    
+    //Result border color
+    static func lightGrey() -> UIColor {
+        return Utils.UIColorFromRGB(rgbValue: 0xE5E5E5)
+    }
+    
 }

@@ -217,7 +217,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="y9b-YQ-2Hc" kind="show" identifier="MapToResults" id="uiQ-zE-EqR"/>
+                                                    <segue destination="ecH-gZ-QQ1" kind="show" id="8HN-db-KMd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -256,35 +256,32 @@
             <point key="canvasLocation" x="340.57971014492756" y="1465.7608695652175"/>
         </scene>
         <!--Results View Controller-->
-        <scene sceneID="ZXk-7R-kPh">
+        <scene sceneID="L47-47-n4G">
             <objects>
-                <viewController id="y9b-YQ-2Hc" customClass="ResultsViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hnB-xE-h4u">
+                <tableViewController id="ecH-gZ-QQ1" customClass="ResultsViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QrU-cW-6Bk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="todo: to make responsive, add views to stack view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkA-mu-h6f">
-                                <rect key="frame" x="31" y="221" width="383" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="add labels and sub views to views in stack view so you can add constraints to the inner most views" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-sY-ofp">
-                                <rect key="frame" x="44" y="250" width="356" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ynE-Ds-wFZ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="chh-yf-XwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jB8-pg-5yu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jB8-pg-5yu" id="qdi-2N-J3J">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ecH-gZ-QQ1" id="eh3-tq-3GN"/>
+                            <outlet property="delegate" destination="ecH-gZ-QQ1" id="Aap-x7-OSp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1X-c6-dkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266.6666666666667" y="1519.5652173913045"/>
+            <point key="canvasLocation" x="1164" y="1466"/>
         </scene>
         <!--HPF Pulse-->
         <scene sceneID="3B6-h1-BOC">
