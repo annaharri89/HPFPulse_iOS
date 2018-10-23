@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SVGPath
+import ObjectMapper
 
 class State {
     var code: String
@@ -21,7 +22,8 @@ class State {
     
     var childAbuseResources = [Resource]()
     var bullyingResources = [Resource]()
-    var domesticViolence = [Resource]()
+    var domesticViolenceResources = [Resource]()
+    var allResources = [Resource]()
     
     init(sEnum: StateEnum, stateScale: CATransform3D, statePosition: CGPoint) {
         self.code = sEnum.getCode()
@@ -75,41 +77,37 @@ class State {
     /**
      * Sets the states resources based on category
      */
-    /* todo implement
-    public void setResources(List<Resource> resourceList) {
-    for (Resource resource : resourceList) {
-    switch (resource.getCategory()) {
-    case Config.categories.CHILD_ABUSE:
-    this.mChildAbuseResource.add(resource);
-    break;
-    case Config.categories.BULLYING:
-    this.mBullyingResource.add(resource);
-    break;
-    case Config.categories.DOMESTIC_VIOLENCE:
-    this.mDomesticViolenceResource.add(resource);
-    break;
-    }
-    }
+    
+    func setResources(resourceList: [Resource]) {
+        for resource in resourceList {
+            self.allResources.append(resource)
+            switch (resource.getCategory()) {
+            case Config.categories.CHILD_ABUSE:
+                self.childAbuseResources.append(resource);
+                break;
+            case Config.categories.BULLYING:
+                self.bullyingResources.append(resource);
+                break;
+            default:
+                self.domesticViolenceResources.append(resource);
+                break;
+            }
+        }
     }
     
-    public List<Resource> getChildAbuseResources() {
-    return this.mChildAbuseResource;
+    func getChildAbuseResources() -> [Resource] {
+        return self.childAbuseResources
     }
     
-    public List<Resource> getBullyingResources() {
-    return this.mBullyingResource;
+    func getBullyingResources() -> [Resource] {
+        return self.bullyingResources
     }
     
-    public List<Resource> getDomesticViolenceResources() {
-    return this.mDomesticViolenceResource;
+    func getDomesticViolenceResources() -> [Resource] {
+        return self.domesticViolenceResources
     }
     
-    public List<Resource> getAllResources() {
-    List<Resource> resources = new ArrayList<>();
-    resources.addAll(this.mChildAbuseResource);
-    resources.addAll(this.mBullyingResource);
-    resources.addAll(this.mDomesticViolenceResource);
-    return resources;
+    func getAllResources() -> [Resource] {
+        return self.allResources
     }
- */
 }

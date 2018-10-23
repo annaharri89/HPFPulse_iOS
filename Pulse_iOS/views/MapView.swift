@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import SVGPath
+import Alamofire
+import AlamofireObjectMapper
+import ObjectMapper
 
 class MapView: UIView {
     static var timeZoneTitlesAndStates = [
@@ -27,7 +30,7 @@ class MapView: UIView {
     var highlightedTimeZone: TimeZoneEnum?
     var selectedTimeZone: TimeZone? = nil
     weak var delegate: MapDelegate?
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -176,7 +179,57 @@ class MapView: UIView {
                     break
             }
             self.timeZones.add([tz.getEnum().getCode() : tz])
-            
+        }
+        
+            Alamofire.request(Config.data.URL)
+                //.validate(statusCode: 200..<300)
+                //.validate(contentType: ["application/json"])
+                .responseArray { (response: DataResponse<[TimeZoneMappable]>) in
+               // print("Request: \(String(describing: response.request))")   // original url request
+               // print("Response: \(String(describing: response.response))") // http url response
+               // print("Result: \(response.result)")                         // response serialization result
+                
+                let timeZoneArray = response.result.value
+                    
+                if let timeZoneArray = timeZoneArray {
+                    for timezone in timeZoneArray {
+                        let tzDictionary = self.timeZones as NSDictionary
+                        var tz = tzDictionary.object(forKey: timezone.code) as! TimeZone
+                        if let statesArray = timezone.states?[0] {
+                            for state in statesArray {
+                                var stateEnum: StateEnum
+                                for s in tz.getStates() {
+                                    if s.getCode() == state.code {
+                                        stateEnum = s.getEnum()
+                                        
+                                        var allResourcesArray = [Resource]()
+                                        if let childAbuseArray = state.childAbuseResources?[0] {
+                                            for resourceMappable in childAbuseArray {
+                                                let resource = Resource(resourceCategory: Config.categories.CHILD_ABUSE, resourceId: resourceMappable.id!, resourceOrgName: resourceMappable.orgName!, resourcePhone: resourceMappable.orgPhone!, resourceStateEnum: stateEnum, resourceUrl: resourceMappable.orgUrl!)
+                                                allResourcesArray.append(resource)
+                                            }
+                                        }
+                                        if let bullyingArray = state.bullyingResources?[0] {
+                                            for resourceMappable in bullyingArray {
+                                                let resource = Resource(resourceCategory: Config.categories.BULLYING, resourceId: resourceMappable.id!, resourceOrgName: resourceMappable.orgName!, resourcePhone: resourceMappable.orgPhone!, resourceStateEnum: stateEnum, resourceUrl: resourceMappable.orgUrl!)
+                                                allResourcesArray.append(resource)
+                                            }
+                                        }
+                                        if let domesticViolenceArray = state.domesticViolenceResources?[0] {
+                                            for resourceMappable in domesticViolenceArray {
+                                                let resource = Resource(resourceCategory: Config.categories.DOMESTIC_VIOLENCE, resourceId: resourceMappable.id!, resourceOrgName: resourceMappable.orgName!, resourcePhone: resourceMappable.orgPhone!, resourceStateEnum: stateEnum, resourceUrl: resourceMappable.orgUrl!)
+                                                allResourcesArray.append(resource)
+                                            }
+                                        }
+                                        tz.setResources(resourceDict: [stateEnum : allResourcesArray])
+                                    }
+                                }
+                            }
+                        }
+                        
+                        print(timezone.code)
+                    }
+                }
         }
     }
     

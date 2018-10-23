@@ -29,6 +29,16 @@ class ResultsViewController: UITableViewController {
         
         print(category)
         print(selectedTimeZone.getCode())
+        for state in selectedTimeZone.getStates() {
+            print("STATE:")
+            print(state.getCode())
+            for resource in state.getAllResources() {
+                print("RESOURCE:")
+                print(resource.getName())
+                print(resource.getUrl())
+                print(resource.getPhoneNumber())
+            }
+        }
         
     }
     
@@ -41,7 +51,6 @@ class ResultsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArray.count
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 151

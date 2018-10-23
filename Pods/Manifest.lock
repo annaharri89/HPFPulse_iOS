@@ -1,28 +1,40 @@
 PODS:
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
   - FantasticSnowflake (2.2.0):
     - Reindeers
-  - Reindeers (1.5.0)
+  - ObjectMapper (3.3.0)
+  - Reindeers (2.2.0)
   - SVGPath (1.0.0)
   - SwiftSVG (2.1.5)
 
 DEPENDENCIES:
+  - AlamofireObjectMapper (~> 5.0)
   - FantasticSnowflake
   - SVGPath
   - SwiftSVG (~> 2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
     - FantasticSnowflake
+    - ObjectMapper
     - Reindeers
     - SVGPath
     - SwiftSVG
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
   FantasticSnowflake: 333f4bc4165066de717a711be9b6bde95831853a
-  Reindeers: 209b189867e000a0605e4e53d1b13440057e9661
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Reindeers: 0c781130bc9088550c70d02a1caf3e328a4b1126
   SVGPath: 369d11028db7c9a91d2f6fd4b6022c162665a232
   SwiftSVG: 9d78f41396a921c210ce9898ada05c85d412acb8
 
-PODFILE CHECKSUM: cdcc95a3f7c84363f3ce2118e3cd0f3362219103
+PODFILE CHECKSUM: 23437f78a727d0356b34e97475ca8f38cb84931d
 
 COCOAPODS: 1.5.3

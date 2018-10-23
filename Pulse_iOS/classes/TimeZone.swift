@@ -67,37 +67,37 @@ class TimeZone {
      * Sets each of the time zone's state's resources. Uses a StateEnum to find the right state.
      * @param resourceMap
      */
-    /*
-    public void setResources(Map<StateEnum, List<Resource>> resourceMap) {
-    for (State state : this.getStates()) {
-    for (Map.Entry<StateEnum, List<Resource>> entry : resourceMap.entrySet())
-    if (entry.getKey().equals(state.getEnum())) {
-    state.setResources(entry.getValue());
-    }
-    }
+    
+    func setResources(resourceDict: [StateEnum : [Resource]]) {
+        for state in self.getStates() {
+            for (key, value) in resourceDict {
+                if (state.getEnum() == key) {
+                    state.setResources(resourceList: value)
+                }
+            }
+        }
     }
     
-    public List<Resource> getStateChildAbuseResources(String stateCode) {
-    State state = this.getState(stateCode);
-    return state.getChildAbuseResources();
+    func getStateChildAbuseResources(stateCode: String) -> [Resource] {
+        let state = self.getState(stateCode: stateCode)
+        return (state?.getChildAbuseResources())!
     }
     
-    public List<Resource> getStateBullyingResources(String stateCode) {
-    State state = this.getState(stateCode);
-    return state.getBullyingResources();
+    func getStateBullyingResources(stateCode: String) -> [Resource] {
+        let state = self.getState(stateCode: stateCode)
+        return (state?.getBullyingResources())!
     }
     
-    public List<Resource> getStateDomesticViolenceResources(String stateCode) {
-    State state = this.getState(stateCode);
-    return state.getDomesticViolenceResources();
+    func getStateDomesticViolenceResources(stateCode: String) -> [Resource] {
+        let state = self.getState(stateCode: stateCode)
+        return (state?.getDomesticViolenceResources())!
     }
     
-    public List<Resource> getAllStateResources(String stateCode) {
-    State state = this.getState(stateCode);
-    return state.getAllResources();
+    func getAllStateResources(stateCode: String) -> [Resource] {
+        let state = self.getState(stateCode: stateCode)
+        return (state?.getAllResources())!
     }
- */
-    
+ 
     func getDescription() -> String {
         return self.description
     }
