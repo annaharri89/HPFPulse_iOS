@@ -11,6 +11,7 @@ import UIKit
 
 protocol MapDelegate: class {
     func onTimeZoneSelected(sender: UIView)
+    func onResultsLoaded(sender: UIView)
 }
 
 class MapViewController: UIViewController, MapDelegate {
@@ -19,9 +20,11 @@ class MapViewController: UIViewController, MapDelegate {
     @IBOutlet weak var mapView: MapView!
     @IBOutlet weak var getResults: BlueButtonWhiteArrow!
     @IBOutlet weak var descriptionText: UILabel!
+    var spinner: UIView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.spinner = UIViewController.displaySpinner(onView: self.view)
 
         // create a new UIView and add it to the view controller
         
@@ -66,6 +69,10 @@ class MapViewController: UIViewController, MapDelegate {
         setDescription()
     }
     
+    func onResultsLoaded(sender: UIView) {
+        UIViewController.removeSpinner(spinner: self.spinner)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ResultsViewController
         vc.category = self.category
@@ -74,3 +81,26 @@ class MapViewController: UIViewController, MapDelegate {
     
     
 }
+extension UIViewController {
+    class func displaySpinner(onView : UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        return spinnerView
+    }
+    
+    class func removeSpinner(spinner :UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}
+

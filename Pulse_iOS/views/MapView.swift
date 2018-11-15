@@ -55,6 +55,11 @@ class MapView: UIView {
         delegate?.onTimeZoneSelected(sender: sender)
     }
     
+    //hooks up the MapView to the MapViewController so that spinner can get dismissed
+    func onResultsLoaded(sender: UIView) {
+        delegate?.onResultsLoaded(sender: sender)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let point = touch!.location(in: self)
@@ -229,6 +234,7 @@ class MapView: UIView {
                         
                         print(timezone.code)
                     }
+                    self.onResultsLoaded(sender: self)
                 }
         }
     }
@@ -274,8 +280,5 @@ class MapView: UIView {
         }
  */
     }
-    
-    
 }
-
 
