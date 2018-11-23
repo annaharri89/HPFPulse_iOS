@@ -74,7 +74,7 @@ class MapViewController: UIViewController, MapDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ResultsViewController
+        let vc = segue.destination as! CategoryResultsViewController
         vc.category = self.category
         vc.selectedTimeZone = self.selectedTimeZone
     }
