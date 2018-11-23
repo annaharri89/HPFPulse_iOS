@@ -12,18 +12,18 @@ import SVGPath
 import ObjectMapper
 
 class State {
-    var code: String
-    var name: String
-    var stateEnum: StateEnum
-    var path: UIBezierPath
-    var layer: CAShapeLayer
-    var scale: CATransform3D
-    var position: CGPoint
+    private var code: String
+    private var name: String
+    private var stateEnum: StateEnum
+    private var path: UIBezierPath
+    private var layer: CAShapeLayer
+    private var scale: CATransform3D
+    private var position: CGPoint
     
-    var childAbuseResources = [Resource]()
-    var bullyingResources = [Resource]()
-    var domesticViolenceResources = [Resource]()
-    var allResources = [Resource]()
+    private var childAbuseResources = [Resource]()
+    private var bullyingResources = [Resource]()
+    private var domesticViolenceResources = [Resource]()
+    private var allResources = [Resource]()
     
     init(sEnum: StateEnum, stateScale: CATransform3D, statePosition: CGPoint) {
         self.code = sEnum.getCode()

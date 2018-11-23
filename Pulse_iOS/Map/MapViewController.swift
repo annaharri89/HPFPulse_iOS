@@ -74,11 +74,24 @@ class MapViewController: UIViewController, MapDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! CategoryResultsViewController
-        vc.category = self.category
-        vc.selectedTimeZone = self.selectedTimeZone
+        if (segue.identifier == "all") {
+            let vc = segue.destination as! AllResultsViewController
+            vc.selectedTimeZone = self.selectedTimeZone
+        } else {
+            let vc = segue.destination as! CategoryResultsViewController
+            vc.category = self.category
+            vc.selectedTimeZone = self.selectedTimeZone
+        }
+        
     }
     
+    @IBAction func getResults(_ sender: Any) {
+        if (self.category == Config.categories.ALL_RESOURCES) {
+            performSegue(withIdentifier: "all", sender: self)
+        } else {
+            performSegue(withIdentifier: "category", sender: self)
+        }
+    }
     
 }
 extension UIViewController {

@@ -9,13 +9,13 @@
 import Foundation
 
 class Resource {
-    var id: Int
-    var orgName: String
-    var url: String
-    var phoneNumber: String
-    var category: String
-    var stateName: String
-    var stateEnum: StateEnum
+    private var id: Int
+    private var orgName: String
+    private var url: String
+    private var phoneNumber: String
+    private var category: String
+    private var stateName: String
+    private var stateEnum: StateEnum
     
     
     init(resourceCategory: String, resourceId: Int, resourceOrgName: String, resourcePhone: String, resourceStateEnum: StateEnum, resourceUrl: String) {

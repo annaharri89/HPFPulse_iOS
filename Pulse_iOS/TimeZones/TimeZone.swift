@@ -11,18 +11,18 @@ import UIKit
 
 class TimeZone {
     
-    var states = [State]()
-    var name: String
-    var description: String
-    var code: String
-    var timeZoneEnum: TimeZoneEnum
-    var color: UIColor!
-    var colorCode: String
-    var scale: CATransform3D
-    var position: CGPoint
+    private var states = [State]()
+    private var name: String
+    private var description: String
+    private var code: String
+    private var timeZoneEnum: TimeZoneEnum
+    private var color: UIColor!
+    private var colorCode: String
+    private var scale: CATransform3D
+    private var position: CGPoint
     
-    var labelBezierPathArray = [UIBezierPath]()
-    var labelShapeLayersArray = [CAShapeLayer]()//todo create function that sets this and call it in the init
+    private var labelBezierPathArray = [UIBezierPath]()
+    private var labelShapeLayersArray = [CAShapeLayer]()//todo create function that sets this and call it in the init
     //todo create getter function for this array
     
     

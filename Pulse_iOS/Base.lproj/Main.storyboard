@@ -107,7 +107,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                                 </variation>
                                                 <connections>
-                                                    <segue destination="ecH-gZ-QQ1" kind="show" id="8HN-db-KMd"/>
+                                                    <action selector="getResults:" destination="3Bu-Zg-pxC" eventType="touchUpInside" id="CL0-cC-XVd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -139,11 +139,13 @@
                         <outlet property="descriptionText" destination="3V2-aP-28G" id="wLx-u5-ach"/>
                         <outlet property="getResults" destination="MJ6-E2-P3J" id="8Y7-hf-Nhg"/>
                         <outlet property="mapView" destination="6fl-PI-hd1" id="dQP-qt-VgF"/>
+                        <segue destination="ecH-gZ-QQ1" kind="show" identifier="category" id="zC9-n2-NQc"/>
+                        <segue destination="F1V-3e-ege" kind="show" identifier="all" id="7GK-Ka-hfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4X-X2-Oal" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340.57971014492756" y="1465.7608695652175"/>
+            <point key="canvasLocation" x="26" y="1581"/>
         </scene>
         <!--Category Results View Controller-->
         <scene sceneID="L47-47-n4G">
@@ -171,7 +173,44 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1X-c6-dkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="1466"/>
+            <point key="canvasLocation" x="928" y="1476"/>
+        </scene>
+        <!--All Results View Controller-->
+        <scene sceneID="tYw-UR-1bD">
+            <objects>
+                <tableViewController id="F1V-3e-ege" customClass="AllResultsViewController" customModule="Pulse_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QB0-JF-8tc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="qbg-rq-pHh" style="IBUITableViewCellStyleDefault" id="BYw-98-elF" customClass="AllResultHeaderTableViewCell" customModule="Pulse_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BYw-98-elF" id="are-Qb-fK7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qbg-rq-pHh">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F1V-3e-ege" id="log-Fq-ndp"/>
+                            <outlet property="delegate" destination="F1V-3e-ege" id="vX1-kN-Vgn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lD8-bG-0Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="2135"/>
         </scene>
         <!--HPF Pulse-->
         <scene sceneID="3B6-h1-BOC">
