@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-aE-kvq">
                                 <rect key="frame" x="0.0" y="0.0" width="359" height="88.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" restorationIdentifier="orgName" text="Illinois Coalition Against Domestic Violence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAH-qC-Z62">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" restorationIdentifier="orgName" text="Illinois Coalition Against Domestic Violence" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAH-qC-Z62">
                                         <rect key="frame" x="16" y="16" width="327" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -41,6 +41,7 @@
                                 <constraints>
                                     <constraint firstItem="RAH-qC-Z62" firstAttribute="leading" secondItem="AAk-aE-kvq" secondAttribute="leading" constant="16" id="4HW-jN-Fte"/>
                                     <constraint firstItem="rnx-r9-jig" firstAttribute="leading" secondItem="AAk-aE-kvq" secondAttribute="leading" constant="16" id="Icv-JN-U9g"/>
+                                    <constraint firstAttribute="trailing" secondItem="RAH-qC-Z62" secondAttribute="trailing" constant="16" id="KdE-CE-hGz"/>
                                     <constraint firstAttribute="bottom" secondItem="rnx-r9-jig" secondAttribute="bottom" constant="16" id="QM0-Km-hJf"/>
                                     <constraint firstItem="rnx-r9-jig" firstAttribute="top" secondItem="RAH-qC-Z62" secondAttribute="bottom" constant="16" id="XgW-lT-Gcw"/>
                                     <constraint firstItem="RAH-qC-Z62" firstAttribute="top" secondItem="AAk-aE-kvq" secondAttribute="top" constant="16" id="bNc-YC-DCM"/>

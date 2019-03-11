@@ -42,21 +42,6 @@ class CategoryResultsViewController: UITableViewController {
             }
         }
         
-        
-        
-        //print(category)
-        //print(selectedTimeZone.getCode())
-        for state in selectedTimeZone.getStates() {
-            //print("STATE:")
-            //print(state.getCode())
-            for resource in state.getAllResources() {
-                //print("RESOURCE:")
-                //print(resource.getName())
-                //print(resource.getUrl())
-                //print(resource.getPhoneNumber())
-            }
-        }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,8 +54,9 @@ class CategoryResultsViewController: UITableViewController {
         return resourcesArray.count
     }
     
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 151
+        return 175
     }
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
